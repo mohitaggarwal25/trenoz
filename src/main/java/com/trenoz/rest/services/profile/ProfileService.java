@@ -21,10 +21,7 @@ public class ProfileService {
 	@Produces(MediaType.APPLICATION_JSON)
 	public RESTAuthResponse getProfile(@Context final HttpServletRequest request,
 			RESTAuthRequest authRequest) {
-		if (request.getRequestedSessionId() != null && !request.isRequestedSessionIdValid()) {
-			
-		}
-
+		
 		System.out.println(request.getSession(true).getId() + " " + new Date());
 		RESTAuthResponse response = null;
 		return response;

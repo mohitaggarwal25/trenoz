@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.trenoz.sample</groupId>
-	<artifactId>Trenoz</artifactId>
+	<artifactId>trenoz</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>AppTest3 Maven Webapp</name>
@@ -127,6 +127,11 @@
 
 		<!-- mongodb java driver -->
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongo-java-driver</artifactId>
 			<version>2.11.0</version>
@@ -169,6 +174,6 @@
 			</plugin>
 
 		</plugins>
-		<finalName>Trenoz</finalName>
+		<finalName>trenoz</finalName>
 	</build>
 </project>
