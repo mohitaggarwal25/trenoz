@@ -1,4 +1,4 @@
-package com.trenoz.rest.services.authentication;
+package com.trenoz.rest.services.authentication.resources;
 
 import java.util.Date;
 
@@ -10,11 +10,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
+import org.springframework.stereotype.Component;
+
 import com.trenoz.services.authentication.model.request.RESTAuthRequest;
 import com.trenoz.services.authentication.model.response.RESTAuthResponse;
 
+@Component
 @Path("/authenticate")
-public class AuthenticationService {
+public class AuthenticationResource {
 
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)

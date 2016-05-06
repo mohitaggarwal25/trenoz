@@ -26,6 +26,11 @@ public class User {
 	private Date createdDate;
 	private Date modifiedDate;
 
+	public User(String email, String password) {
+		this.email = email;
+		this.password = password;
+	}
+
 	/**
 	 * @return the id
 	 */

@@ -1,10 +1,9 @@
 package com.trenoz.services.authentication.model.request;
 
-public class RESTCredential{
+public class RESTCredential {
 
 	private String userId;
 	private String password;
-	private String passPhrase;
 
 	public RESTCredential() {
 	}
@@ -12,12 +11,10 @@ public class RESTCredential{
 	/**
 	 * @param userId
 	 * @param password
-	 * @param passPhrase
 	 */
-	public RESTCredential(String userId, String password, String passPhrase) {
+	public RESTCredential(String userId, String password) {
 		this.userId = userId;
 		this.password = password;
-		this.passPhrase = passPhrase;
 	}
 
 	/**
@@ -28,7 +25,8 @@ public class RESTCredential{
 	}
 
 	/**
-	 * @param userId the userId to set
+	 * @param userId
+	 *            the userId to set
 	 */
 	public void setUserId(String userId) {
 		this.userId = userId;
@@ -42,25 +40,11 @@ public class RESTCredential{
 	}
 
 	/**
-	 * @param password the password to set
+	 * @param password
+	 *            the password to set
 	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	/**
-	 * @return the passPhrase
-	 */
-	public String getPassPhrase() {
-		return passPhrase;
-	}
-
-	/**
-	 * @param passPhrase the passPhrase to set
-	 */
-	public void setPassPhrase(String passPhrase) {
-		this.passPhrase = passPhrase;
-	}
-
 
 }

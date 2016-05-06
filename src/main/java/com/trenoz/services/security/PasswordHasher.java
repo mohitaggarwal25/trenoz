@@ -3,6 +3,8 @@ package com.trenoz.services.security;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import org.springframework.stereotype.Component;
+
 /**
  * The PasswordHasher used to encrypt the entered password by using SHA1
  * algorithm
@@ -11,6 +13,7 @@ import java.security.NoSuchAlgorithmException;
  * @version 1.0
  *
  */
+@Component
 public class PasswordHasher {
 
 	/**

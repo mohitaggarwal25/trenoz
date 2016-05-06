@@ -14,15 +14,12 @@ import com.trenoz.services.profile.constants.ProfileConstants;
 @Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class ProfileInfoHolder {
 
-	private Map<String, Object> profileInfo;
+	private Map<String, Object> profileInfo = new HashMap<>();
 
 	/**
 	 * @return the profileInfo
 	 */
 	public Map<String, Object> getProfileInfo() {
-		if (profileInfo == null) {
-			profileInfo = new HashMap<>();
-		}
 		return profileInfo;
 	}
 
@@ -39,7 +36,7 @@ public class ProfileInfoHolder {
 	 *         profileId)
 	 */
 	public boolean isTransient() {
-		return profileInfo == null || profileInfo.get(ProfileConstants.PROFILE_ID) == null;
+		return profileInfo.get(ProfileConstants.PROFILE_ID) == null;
 	}
 
 	/**
