@@ -44,14 +44,13 @@ public class ProfileResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response create(@Context final HttpServletRequest request,
-			RESTAuthRequest authRequest) {
+			User userRequest) {
 		if (request.getRequestedSessionId() != null && !request.isRequestedSessionIdValid()) {
 			
 		}
 
 		System.out.println(request.getSession(true).getId() + " " + new Date());
-		Response response = Response.ok().entity(profileService.createUser(
-				new User(authRequest.getCredential().getUserId(), authRequest.getCredential().getPassword()))).build();
+		Response response = Response.ok().entity(profileService.createUser(userRequest)).build();
 		return response;
 	}
 	

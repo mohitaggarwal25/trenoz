@@ -1,6 +1,7 @@
 package com.trenoz.services.profile.model.beans;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,12 +18,14 @@ public class User {
 	private String password;
 	private String passPhrase;
 	private String phoneNo;
-	private UserContact contact;
+	private UserAddress address;
+	private List<String> sessionId;
 	private String qualification;
 	private boolean working;
 	private boolean studyingInInstitute;
 	private String instituteStudyingIn;
 	private boolean notificationsSubscribed;
+	private boolean registered;
 	private Date createdDate;
 	private Date modifiedDate;
 
@@ -137,18 +140,33 @@ public class User {
 	}
 
 	/**
-	 * @return the contact
+	 * @return the address
 	 */
-	public UserContact getContact() {
-		return contact;
+	public UserAddress getAddress() {
+		return address;
 	}
 
 	/**
-	 * @param contact
-	 *            the contact to set
+	 * @param address
+	 *            the address to set
 	 */
-	public void setContact(UserContact contact) {
-		this.contact = contact;
+	public void setAddress(UserAddress address) {
+		this.address = address;
+	}
+
+	/**
+	 * @return the sessionId
+	 */
+	public List<String> getSessionId() {
+		return sessionId;
+	}
+
+	/**
+	 * @param sessionId
+	 *            the sessionId to set
+	 */
+	public void setSessionId(List<String> sessionId) {
+		this.sessionId = sessionId;
 	}
 
 	/**
@@ -227,6 +245,21 @@ public class User {
 	}
 
 	/**
+	 * @return the registered
+	 */
+	public boolean isRegistered() {
+		return registered;
+	}
+
+	/**
+	 * @param registered
+	 *            the registered to set
+	 */
+	public void setRegistered(boolean registered) {
+		this.registered = registered;
+	}
+
+	/**
 	 * @return the createdDate
 	 */
 	public Date getCreatedDate() {
@@ -256,4 +289,8 @@ public class User {
 		this.modifiedDate = modifiedDate;
 	}
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", email=" + email + ", registered=" + registered + "]";
+	}
 }

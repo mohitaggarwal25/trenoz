@@ -1,6 +1,6 @@
 package com.trenoz.services.profile.model.beans;
 
-public class UserContact {
+public class UserAddress {
 
 	private String address1;
 	private String address2;
