@@ -1,6 +1,6 @@
 package com.trenoz.services.common.excpetions;
 
-public class RestServiceException extends Exception {
+public class RestServiceException extends RuntimeException {
 
 	/**
 	 * 

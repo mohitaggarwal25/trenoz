@@ -19,7 +19,7 @@ public class User {
 	private String passPhrase;
 	private String phoneNo;
 	private UserAddress address;
-	private List<String> sessionId;
+	private List<String> sessionIds;
 	private String qualification;
 	private boolean working;
 	private boolean studyingInInstitute;
@@ -155,18 +155,18 @@ public class User {
 	}
 
 	/**
-	 * @return the sessionId
+	 * @return the sessionIds
 	 */
-	public List<String> getSessionId() {
-		return sessionId;
+	public List<String> getSessionIds() {
+		return sessionIds;
 	}
 
 	/**
-	 * @param sessionId
-	 *            the sessionId to set
+	 * @param sessionIds
+	 *            the sessionIds to set
 	 */
-	public void setSessionId(List<String> sessionId) {
-		this.sessionId = sessionId;
+	public void setSessionIds(List<String> sessionIds) {
+		this.sessionIds = sessionIds;
 	}
 
 	/**
