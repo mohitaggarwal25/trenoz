@@ -21,6 +21,7 @@ import com.trenoz.services.authentication.model.response.RESTAuthResponse;
 import com.trenoz.services.common.model.response.RESTError;
 import com.trenoz.services.profile.excpetions.ProfileCreateUpdateContactException;
 import com.trenoz.services.profile.excpetions.ProfileCreateUserException;
+import com.trenoz.services.profile.holder.ProfileInfoHolder;
 import com.trenoz.services.profile.model.request.RESTCreateUpdateContactRequest;
 import com.trenoz.services.profile.model.request.RESTCreateUserRequest;
 import com.trenoz.services.profile.model.response.RESTProfileResponse;
@@ -34,6 +35,9 @@ public class ProfileResource {
 
 	@Autowired
 	private ProfileService profileService;
+
+	@Autowired
+	private ProfileInfoHolder profileHolder;
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -114,11 +118,13 @@ public class ProfileResource {
 			responseEntity.setError(error);
 			response = Response.status(Response.Status.BAD_REQUEST).entity(responseEntity).build();
 		}
+		if(profileHolder != null)
+			profileHolder.isTransient();
 		return response;
 	}
 
 	@POST
-	@Path("/update")
+	@Path("/updateInfo")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public RESTAuthResponse updateProfile(@Context final HttpServletRequest request, RESTAuthRequest authRequest) {

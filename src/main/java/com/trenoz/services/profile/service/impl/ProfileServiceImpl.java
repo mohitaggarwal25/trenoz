@@ -61,7 +61,9 @@ public class ProfileServiceImpl implements ProfileService {
 				throw new ProfileCreateUserException("Error creating user", "PROF4001", e);
 			}
 		}
-		profileHolder.put(ProfileConstants.PROFILE_ID, user.getId());
+		if (profileHolder != null) {
+			profileHolder.put(ProfileConstants.PROFILE_ID, user.getId());
+		}
 		return "User Account created successfully";
 	}
 
