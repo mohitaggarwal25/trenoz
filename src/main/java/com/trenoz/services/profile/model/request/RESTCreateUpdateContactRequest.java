@@ -1,23 +1,25 @@
 package com.trenoz.services.profile.model.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.trenoz.services.common.model.request.RESTCommonRequestParams;
 import com.trenoz.services.profile.model.beans.User;
 
-public class RESTUpdateUserRequest extends RESTCommonRequestParams {
+public class RESTCreateUpdateContactRequest extends RESTCommonRequestParams {
 
+	@JsonProperty("contact")
 	private User user;
 
 	/**
 	 * @param user
 	 */
-	public RESTUpdateUserRequest(User user) {
+	public RESTCreateUpdateContactRequest(User user) {
 		this.user = user;
 	}
 
 	/**
 	 * default
 	 */
-	public RESTUpdateUserRequest() {
+	public RESTCreateUpdateContactRequest() {
 	}
 
 	/**

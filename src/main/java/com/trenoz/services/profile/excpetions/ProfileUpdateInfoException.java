@@ -2,7 +2,7 @@ package com.trenoz.services.profile.excpetions;
 
 import com.trenoz.services.common.excpetions.RestServiceException;
 
-public class ProfileCreateUserException extends RestServiceException {
+public class ProfileUpdateInfoException extends RestServiceException {
 
 	/**
 	 * 
@@ -24,7 +24,7 @@ public class ProfileCreateUserException extends RestServiceException {
 	 * @param message
 	 * @param errorCode
 	 */
-	public ProfileCreateUserException(String message, String errorCode) {
+	public ProfileUpdateInfoException(String message, String errorCode) {
 		super(message);
 		this.errorCode = errorCode;
 	}
@@ -34,7 +34,7 @@ public class ProfileCreateUserException extends RestServiceException {
 	 * @param cause
 	 * @param errorCode
 	 */
-	public ProfileCreateUserException(String message, String errorCode, Throwable cause) {
+	public ProfileUpdateInfoException(String message, String errorCode, Throwable cause) {
 		super(message, cause);
 		this.errorCode = errorCode;
 	}

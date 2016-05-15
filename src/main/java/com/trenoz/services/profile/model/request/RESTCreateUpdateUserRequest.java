@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.trenoz.services.common.model.request.RESTCommonRequestParams;
 import com.trenoz.services.profile.model.beans.User;
 
-public class RESTCreateUserRequest extends RESTCommonRequestParams {
+public class RESTCreateUpdateUserRequest extends RESTCommonRequestParams {
 
 	@JsonProperty("user")
 	private User user;
@@ -12,14 +12,14 @@ public class RESTCreateUserRequest extends RESTCommonRequestParams {
 	/**
 	 * @param user
 	 */
-	public RESTCreateUserRequest(User user) {
+	public RESTCreateUpdateUserRequest(User user) {
 		this.user = user;
 	}
 
 	/**
 	 * default
 	 */
-	public RESTCreateUserRequest() {
+	public RESTCreateUpdateUserRequest() {
 	}
 
 	/**

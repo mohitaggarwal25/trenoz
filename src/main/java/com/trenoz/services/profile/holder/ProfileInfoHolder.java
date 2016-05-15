@@ -32,6 +32,14 @@ public class ProfileInfoHolder {
 	}
 
 	/**
+	 * @param profileInfo
+	 *            the profileInfo to set
+	 */
+	public void put(String key, Object obj) {
+		this.profileInfo.put(key, obj);
+	}
+
+	/**
 	 * @return false when the profile is inTransient (profileInfo contains
 	 *         profileId)
 	 */

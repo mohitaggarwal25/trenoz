@@ -1,7 +1,6 @@
 package com.trenoz.services.profile.model.beans;
 
-import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,17 +16,21 @@ public class User {
 	private String email;
 	private String password;
 	private String passPhrase;
-	private String phoneNo;
+	private Set<String> phoneNos;
 	private UserAddress address;
-	private List<String> sessionIds;
+	private Set<String> sessionIds;
 	private String qualification;
-	private boolean working;
-	private boolean studyingInInstitute;
+	private Boolean working;
+	private Boolean studyingInInstitute;
 	private String instituteStudyingIn;
-	private boolean notificationsSubscribed;
+	private Boolean notificationsSubscribed;
 	private boolean registered;
-	private Date createdDate;
-	private Date modifiedDate;
+	private String createdDate;
+	private String modifiedDate;
+
+	public User() {
+
+	}
 
 	public User(String email, String password) {
 		this.email = email;
@@ -127,16 +130,16 @@ public class User {
 	/**
 	 * @return the phoneNo
 	 */
-	public String getPhoneNo() {
-		return phoneNo;
+	public Set<String> getPhoneNos() {
+		return phoneNos;
 	}
 
 	/**
 	 * @param phoneNo
 	 *            the phoneNo to set
 	 */
-	public void setPhoneNo(String phoneNo) {
-		this.phoneNo = phoneNo;
+	public void setPhoneNos(Set<String> phoneNos) {
+		this.phoneNos = phoneNos;
 	}
 
 	/**
@@ -157,7 +160,7 @@ public class User {
 	/**
 	 * @return the sessionIds
 	 */
-	public List<String> getSessionIds() {
+	public Set<String> getSessionIds() {
 		return sessionIds;
 	}
 
@@ -165,7 +168,7 @@ public class User {
 	 * @param sessionIds
 	 *            the sessionIds to set
 	 */
-	public void setSessionIds(List<String> sessionIds) {
+	public void setSessionIds(Set<String> sessionIds) {
 		this.sessionIds = sessionIds;
 	}
 
@@ -187,7 +190,7 @@ public class User {
 	/**
 	 * @return the working
 	 */
-	public boolean isWorking() {
+	public Boolean isWorking() {
 		return working;
 	}
 
@@ -195,14 +198,14 @@ public class User {
 	 * @param working
 	 *            the working to set
 	 */
-	public void setWorking(boolean working) {
+	public void setWorking(Boolean working) {
 		this.working = working;
 	}
 
 	/**
 	 * @return the studyingInInstitute
 	 */
-	public boolean isStudyingInInstitute() {
+	public Boolean isStudyingInInstitute() {
 		return studyingInInstitute;
 	}
 
@@ -210,7 +213,7 @@ public class User {
 	 * @param studyingInInstitute
 	 *            the studyingInInstitute to set
 	 */
-	public void setStudyingInInstitute(boolean studyingInInstitute) {
+	public void setStudyingInInstitute(Boolean studyingInInstitute) {
 		this.studyingInInstitute = studyingInInstitute;
 	}
 
@@ -232,7 +235,7 @@ public class User {
 	/**
 	 * @return the notificationsSubscribed
 	 */
-	public boolean isNotificationsSubscribed() {
+	public Boolean isNotificationsSubscribed() {
 		return notificationsSubscribed;
 	}
 
@@ -240,7 +243,7 @@ public class User {
 	 * @param notificationsSubscribed
 	 *            the notificationsSubscribed to set
 	 */
-	public void setNotificationsSubscribed(boolean notificationsSubscribed) {
+	public void setNotificationsSubscribed(Boolean notificationsSubscribed) {
 		this.notificationsSubscribed = notificationsSubscribed;
 	}
 
@@ -262,7 +265,7 @@ public class User {
 	/**
 	 * @return the createdDate
 	 */
-	public Date getCreatedDate() {
+	public String getCreatedDate() {
 		return createdDate;
 	}
 
@@ -270,14 +273,14 @@ public class User {
 	 * @param createdDate
 	 *            the createdDate to set
 	 */
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(String createdDate) {
 		this.createdDate = createdDate;
 	}
 
 	/**
 	 * @return the modifiedDate
 	 */
-	public Date getModifiedDate() {
+	public String getModifiedDate() {
 		return modifiedDate;
 	}
 
@@ -285,7 +288,7 @@ public class User {
 	 * @param modifiedDate
 	 *            the modifiedDate to set
 	 */
-	public void setModifiedDate(Date modifiedDate) {
+	public void setModifiedDate(String modifiedDate) {
 		this.modifiedDate = modifiedDate;
 	}
 
