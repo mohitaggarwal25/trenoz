@@ -1,0 +1,31 @@
+auth
+{
+	"correlationId": "4CLHDS76HKJA77861JKJHK1",
+	"channel": "mobile",
+	"sessionId": "5C128971B3F60D556B72854BE8C4A1C8",
+	"credential": {
+		"userId": "mohit",
+		"password": "password"
+	}
+}
+
+create
+{
+	"correlationId": "4CLHDS76HKJA77861JKJHK1",
+	"channel": "mobile",
+	"sessionId": "5C128971B3F60D556B72854BE8C4A1C8",
+	"user": {
+		"firstName": "mohit",
+		"lastName": "aggarwal",
+		"email" : "mohitaggarwal25@gmail.com",
+		"password" : "password",
+		"phoneNo" : "+918800382009",
+		"notificationsSubscribed": true
+	}
+}
+
+Errors:
+	PROF1001 : User already exists
+	PROF1002 : User Object null
+	PROF2001 : Error creating user
+	PROF3001 : Error creating Contact
